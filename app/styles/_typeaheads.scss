@@ -1,0 +1,53 @@
+.typeahead {
+  .form-control {
+    @include border-right-radius(4px !important);
+    @include border-left-radius(0 !important);
+
+    float: none;
+  }
+
+  .glyphicon {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    opacity: 0.4;
+    z-index: 10;
+    font-size: 1.5em;
+  }
+
+  ul {
+    @include border-bottom-radius(5px);
+    position: absolute;
+    padding: 0;
+    width: calc(100% - #{$label-width});
+    background-color: #fff;
+    list-style: none;
+    border: 1px solid $grey;
+    border-top: 0;
+    @include box-shadow($grey 0px 2px 5px);
+    z-index: 1000;
+
+    li {
+      padding: 10px 16px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+
+      &:last-child {
+        @include border-bottom-radius(5px);
+        border-bottom: 0;
+      }
+
+      span {
+        display: block;
+      }
+
+      &.active {
+        background-color: $light-red;
+
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}

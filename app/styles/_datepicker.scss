@@ -1,0 +1,87 @@
+.ui-datepicker {
+  @include border-radius(5px);
+  @include box-shadow($main-shadow 0px 0px 5px);
+  border: 1px solid $main-border;
+	width: 220px;
+  height: 175px;
+	padding: 5px 0;
+	display: none;
+  background-color: $dp-background;
+  color: $dp-text-color;
+
+  .ui-datepicker-header {
+    .ui-datepicker-title {
+      text-align: center;
+    }
+
+    .ui-datepicker-prev, .ui-datepicker-next {
+    	position: absolute;
+    	top: 5px;
+      cursor: pointer;
+      color: $dp-text-color;
+
+      &:hover {
+        color: $dp-text-hover;
+      }
+    }
+
+    .ui-datepicker-prev {
+      left: 10px;
+    }
+
+    .ui-datepicker-next {
+      right: 10px;
+    }
+  }
+
+  .ui-datepicker-calendar {
+    border-collapse: separate;
+    width: 100%;
+
+    th {
+      background-color: $dp-background-th;
+    }
+
+    th, td {
+      text-align: center;
+      border-top: 1px solid $dp-border;
+
+      a {
+        display: block;
+        cursor: pointer;
+        color: $dp-text-color;
+
+        &:hover {
+          color: $dp-text-hover;
+        }
+      }
+
+      .ui-state-hover {
+        background-color: $dp-background-hover;
+      }
+
+      &.ui-datepicker-unselectable {
+        color: $dp-text-unselectable !important;
+        text-decoration: line-through;
+      }
+
+      &.ui-datepicker-current-day {
+        background-color: $dp-background-current !important;
+
+        a {
+          color: $dp-text-current;
+
+          &:hover {
+            color: $dp-text-hover;
+          }
+        }
+      }
+
+      &.ui-datepicker-week-end {
+        a {
+          color: $dp-text-weekend;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import 'compass/css3';
+@import 'colors';
+@import 'modals';
+
+$label-width:     120px;
+
+@import 'typeaheads';
+@import 'datepicker';
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $main-background;
+  color: $font-color;
+
+  a {
+    color: $font-color;
+  }
+
+  .anchor {
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  #main-container {
+    height: 100%;
+  }
+}
